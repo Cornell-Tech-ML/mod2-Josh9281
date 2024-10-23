@@ -56,7 +56,7 @@ Time per epoch: 0.140s
 ## Dataset: Diag
 **Settings:**
 - Number of Points: 50
-- Size of Hidden Layers: 5
+- Size of Hidden Layers: 10
 - Learning Rate: 0.05
 - Number of Epochs: 1000
 
@@ -64,23 +64,23 @@ Time per epoch: 0.140s
 
 | Epoch | Loss               | Correct |
 |-------|---------------------|---------|
-| 10    | 25.654245384771265  | 44      |
-| 20    | 20.504266351748086  | 44      |
-| 50    | 16.164875164802407  | 44      |
-| 100   | 14.796806221914395  | 44      |
-| 200   | 12.883006725287384  | 44      |
-| 300   | 10.908183117092893  | 44      |
-| 400   | 8.770246559569022   | 45      |
-| 500   | 7.38342265296124    | 47      |
-| 1000  | 3.95701953673952    | 49      |
+| 10    | 19.347845258443577  | 43      |
+| 20    | 17.890135911189837  | 43      |
+| 50    | 15.437896686682864  | 43      |
+| 100   | 13.17943170924022   | 43      |
+| 200   | 9.604177046297476   | 43      |
+| 300   | 6.921960968827461   | 47      |
+| 400   | 5.184393127872349   | 48      |
+| 500   | 4.08376928450071    | 49      |
+| 1000  | 1.965745563984375   | 50      |
 
-Time per epoch: 0.139s
+Time per epoch: 0.372s
 
 ### Result Graph
-![Diag Dataset Result Graph](graphs/Diag.png)
+![Diag Dataset Result Graph](graph/Diag.png)
 
 ### Loss Function Graph
-![Diag Dataset Loss Function Graph](graphs/Diag_lg.png)
+![Diag Dataset Loss Function Graph](graph/Diag_lg.png)
 
 ---
 
@@ -108,10 +108,10 @@ Time per epoch: 0.139s
 Time per epoch: 0.720s
 
 ### Result Graph
-![Split Dataset Result Graph](graphs/Split.png)
+![Split Dataset Result Graph](graph/Split.png)
 
 ### Loss Function Graph
-![Split Dataset Loss Function Graph](graphs/Split_lg.png)
+![Split Dataset Loss Function Graph](graph/Split_lg.png)
 
 ---
 
@@ -139,9 +139,9 @@ Time per epoch: 0.720s
 Time per epoch: 1.197s
 
 ### Result Graph
-![Xor Dataset Result Graph](graphs/Xor.png)
+![Xor Dataset Result Graph](graph/Xor.png)
 
 ### Loss Function Graph
-![Xor Dataset Loss Function Graph](graphs/Xor_lg.png)
+![Xor Dataset Loss Function Graph](graph/Xor_lg.png)
 
 
