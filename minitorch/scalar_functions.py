@@ -157,15 +157,20 @@ class Sigmoid(ScalarFunction):
     @staticmethod
     def forward(ctx: Context, a: float) -> float:
         """Perform forward pass for sigmoid function."""
-        ctx.save_for_backward(a)
-        return float(1 / (1 + minitorch.operators.exp(-a)))
+        # ctx.save_for_backward(a)
+        # return float(1 / (1 + minitorch.operators.exp(-a)))
+        out = operators.sigmoid(a)
+        ctx.save_for_backward(out)
+        return out
 
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         """Perform backward pass for sigmoid function."""
-        (a,) = ctx.saved_values
-        sig = 1 / (1 + minitorch.operators.exp(-a))
-        return float(d_output * sig * (1 - sig))
+        # (a,) = ctx.saved_values
+        # sig = 1 / (1 + minitorch.operators.exp(-a))
+        # return float(d_output * sig * (1 - sig))
+        sigma: float = ctx.saved_values[0]
+        return sigma * (1.0 - sigma) * d_output
 
 
 class ReLU(ScalarFunction):
