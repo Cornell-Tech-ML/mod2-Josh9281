@@ -190,14 +190,19 @@ class Exp(ScalarFunction):
     @staticmethod
     def forward(ctx: Context, a: float) -> float:
         """Perform forward pass for exponential function."""
-        ctx.save_for_backward(a)
-        return float(operators.exp(a))
+        # ctx.save_for_backward(a)
+        # return float(operators.exp(a))
+        out = operators.exp(a)
+        ctx.save_for_backward(out)
+        return out
 
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         """Perform backward pass for exponential function."""
-        (a,) = ctx.saved_values
-        return float(d_output * operators.exp(a))
+        # (a,) = ctx.saved_values
+        # return float(d_output * operators.exp(a))
+        out: float = ctx.saved_values[0]
+        return d_output * out
 
 
 class LT(ScalarFunction):
