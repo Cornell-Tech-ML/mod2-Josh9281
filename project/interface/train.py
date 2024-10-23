@@ -135,6 +135,9 @@ def render_train_interface(
             )
             st_epoch_plot.plotly_chart(fig)
 
+            # #  Add unique key for this plot
+            # st_epoch_plot.plotly_chart(fig, key=f"loss_graph_{epoch}")
+
             print(
                 f"Epoch: {epoch}/{max_epochs}, loss: {total_loss}, correct: {correct}"
             )
