@@ -46,10 +46,10 @@ The files that will be synced are:
 Time per epoch: 0.140s
 
 ### Result Graph
-![Simple Dataset Result Graph](graphs/Simple.png)
+![Simple Dataset Result Graph](graph/Simple.png)
 
 ### Loss Function Graph
-![Simple Dataset Loss Function Graph](graphs/Simple_lg.png)
+![Simple Dataset Loss Function Graph](graph/Simple_lg.png)
 
 ---
 

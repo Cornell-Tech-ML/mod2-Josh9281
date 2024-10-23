@@ -191,13 +191,13 @@ class Exp(ScalarFunction):
     def forward(ctx: Context, a: float) -> float:
         """Perform forward pass for exponential function."""
         ctx.save_for_backward(a)
-        return float(minitorch.operators.exp(a))
+        return float(operators.exp(a))
 
     @staticmethod
     def backward(ctx: Context, d_output: float) -> float:
         """Perform backward pass for exponential function."""
         (a,) = ctx.saved_values
-        return float(d_output * minitorch.operators.exp(a))
+        return float(d_output * operators.exp(a))
 
 
 class LT(ScalarFunction):
